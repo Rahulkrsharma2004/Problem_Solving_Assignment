@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEBOUNCING</title>
+    <style>
+        body {              
+            margin: 0;
+            font-family: monospace;
+            background-color: rgb(45, 80, 86);
+            background: url(https://wallpapercave.com/wp/wp2714579.png);
+        }
+
+        #main {
+            /* border: 1px solid red; */
+            width: 90vw;
+            /* height: 20vh; */
+            font-family: monospace;
+            margin: auto;
+            margin-top: 10px;
+
+
+        }
+
+        #searchBar {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(30, 33, 34);
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        #menu {
+            display: flex;
+            justify-content: space-between;
+            font-size: 17px;
+            font-weight: bold;
+            background-color: rgb(55, 60, 62);
+            box-sizing: border-box;
+            padding: 20px;
+            color: aliceblue;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+
+        }
+
+        #searchBox {
+            border-radius: 100px;
+            border: 1px solid grey;
+            height: 40px;
+            width: 400px;
+            background-color: rgb(19, 21, 22);
+            box-sizing: border-box;
+            padding: 5px;
+            color: white;
+        }
+
+        #searchBox::placeholder {
+            color: rgb(95, 94, 94);
+            padding: 11px;
+        }
+
+        button {
+            width: 100px;
+            height: 40px;
+            background-color: rgb(135, 206, 250);
+            border: none;
+            border-radius: 10px;
+            font-family: monospace;
+        }
+
+        button:hover {
+            background-color: rgb(61, 135, 180);
+        }
+
+        a {
+            color: black;
+        }
+
+        h1 {
+            color: rgb(23, 207, 78);
+            
+        }
+        p{
+            /* background-color: brown; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="searchBar">
+            <div>
+                <img src="https://th.bing.com/th/id/OIP.dwJSQC8uKbStjMhcc3bLfgHaDt?w=330&h=174&c=7&r=0&o=5&pid=1.7" alt="" style="height: 80px; width: 200px;">
+            </div>
+
+            <input id="searchBox" type="search" placeholder="search">
+
+            <div>
+                <button><a href="./signup.html">Signup</a></button>
+                <button><a href="./login.html">Login</a></button>
+            </div>
+        </div>
+        <div id="menu">
+            <p>HOME</p>
+            <p>MOVIES</p>
+            <p>GENER</p>
+            <p>YEAR</p>
+            <p>OTT</p>
+            <p>WEB SERIES</p>
+            <p>SERIES GENER</p>
+        </div>
+    </div>
+
+    <h1 style="text-align: center;">Please Login to see the Data</h1>
+</body>
+<script>
+</script>
+
+</html>

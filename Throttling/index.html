@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THROTTLING</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: monospace;
+            background-color: rgb(4, 57, 83);
+            /* background: url(https://wallpapercave.com/wp/wp2714579.png); */
+        }
+
+        #main {
+            /* border: 1px solid red; */
+            width: 90vw;
+            /* height: 20vh; */
+            font-family: monospace;
+            margin: auto;
+            margin-top: 10px;
+
+        }
+
+        #searchBar {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(30, 33, 34);
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        #menu {
+            display: flex;
+            justify-content: space-between;
+            font-size: 17px;
+            font-weight: bold;
+            background-color: rgb(55, 60, 62);
+            box-sizing: border-box;
+            padding: 20px;
+            color: aliceblue;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            border: 2px solid rgb(212, 149, 149);
+        }
+
+        #searchBox {
+            border-radius: 100px;
+            border: 1px solid rgb(174, 155, 155);
+            height: 40px;
+            width: 400px;
+            background-color: rgb(39, 48, 52);
+            box-sizing: border-box;
+            padding: 5px;
+            color: whitesmoke;
+        }
+
+        #searchBox::placeholder {
+            color: rgb(95, 94, 94);
+            /* margin-left: 50px; */
+            padding: 11px;
+        }
+
+        button {
+            width: 100px;
+            height: 40px;
+            background-color: lightskyblue;
+            border: none;
+            border-radius: 10px;
+            font-family: monospace;
+        }
+
+        button:hover {
+            background-color: rgb(50, 159, 226)
+        }
+
+        #container {
+            width: 70%;
+            margin: auto;
+            margin-top: 15px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: space-evenly;
+            gap: 15px;
+        }
+
+        #container img {
+            max-width: 100%;
+            /* width: 80%; */
+            margin: auto;
+            transition: 0.2s linear;
+            box-shadow: rgb(65, 132, 79) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+        }
+
+        #container div {
+            /* margin: 10px; */
+            background-color: rgb(30, 33, 34);
+            color: white;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            /* box-sizing: border-box;
+            padding: 10px; */
+        }
+
+        #container>div h3,
+        p {
+            margin: 10px;
+            /* border: 2px solid rgb(234, 232, 88); */
+            /* background-color: brown; */
+        }
+
+        p:hover {
+            color: aqua;
+            cursor: pointer;
+        }
+
+        #container img:hover {
+            opacity: 50%;
+            margin: auto;
+            transition: 0.2s linear;
+
+        }
+
+        a {
+            color: rgb(0, 0, 0);
+        }
+
+        h1 {
+            color: rgb(25, 227, 45);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="searchBar">
+            <div>
+                <img src="https://th.bing.com/th/id/OIP.dwJSQC8uKbStjMhcc3bLfgHaDt?w=330&h=174&c=7&r=0&o=5&pid=1.7"
+                    alt="" style="height: 80px; width: 200px;">
+            </div>
+
+            <input id="searchBox" type="search" placeholder="search">
+
+            <div>
+                <button onclick="showMovies()">Search</button>
+                <button><a href="./home.html">Logout</a></button>
+            </div>
+        </div>
+        <div id="menu">
+            <p>HOME</p>
+            <p>MOVIES</p>
+            <p>GENER</p>
+            <p>YEAR</p>
+            <p>OTT</p>
+            <p>WEB SERIES</p>
+            <p>SERIES GENER</p>
+        </div>
+    </div>
+
+    <div id="container"></div>
+</body>
+
+</html>
+<script src="./index.js"></script>

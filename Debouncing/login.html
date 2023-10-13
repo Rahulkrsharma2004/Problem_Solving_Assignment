@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: rgb(18, 27, 24);
+        }
+
+        .container {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2em;
+        }
+
+        form {
+            padding: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 106%;
+            background-color: #262fd2;
+            color: #fff;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: rgb(28, 28, 181);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="color: antiquewhite;">Login</h1>
+        <form id="login-form">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+
+</html>
+<script>
+    const loginForm = document.getElementById('login-form');
+
+    loginForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const email = loginForm.querySelector('[name="email"]').value;
+        const password = loginForm.querySelector('[name="password"]').value;
+
+        // Get user data from local storage
+        const name = localStorage.getItem('name');
+        const storedEmail = localStorage.getItem('email');
+        const storedPassword = localStorage.getItem('password');
+
+        // Check if user data matches the login form data
+        if (email === storedEmail && password === storedPassword) {
+            // Redirect to another page
+            window.location.href = './adminHome.html';
+        } else {
+            // Show an error message
+            alert('Invalid email or password.');
+        }
+    });
+
+</script>
